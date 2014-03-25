@@ -6,17 +6,23 @@ my_family_pets_ages = {"Evi" => 6, "Hoobie" => 3, "George" => 12, "Bogart" => 4,
 
 # Person 1's solution
 def my_array_finding_method(source, thing_to_find)
-  # Your code here!
+  words = []
+  source.each {|element| words << element unless (element.is_a? Integer) || !(element.include? thing_to_find)}
+  words
 end
 
 def my_hash_finding_method(source, thing_to_find)
-  # Your code here!
+  names = []
+  source.each {|k,v| names << k if v == thing_to_find}
+  names
 end
 
 # Identify and describe the ruby method you implemented. 
-# 
-#
-#
+# I used each to iterate over the array and hash. It does whatever block of
+# code you put after it for each element of the array/hash. I used {} but you 
+# can use do-end as well. You can use |x| in the block to indicate how you want 
+# to reference each element in your code, or in the case of hashes, |x, y|.
+
 
 # Person 2
 def my_array_modification_method(source, thing_to_modify)
@@ -67,15 +73,15 @@ end
 # HINT: Use `puts` statements to see if you are altering the original structure with these methods. 
 # Each of these should return `true` if they are implemented properly.
 
-p my_array_finding_method(i_want_pets, "t") == ["want","pets","but"]
-p my_hash_finding_method(my_family_pets_ages, 3) == ["Hoobie", "Ditto"]
-p my_array_modification_method(i_want_pets, 1) == ["I", "want", 4, "pets", "but", "I", "only", "have", 3 ]
-p my_hash_modification_method(my_family_pets_ages, 2) == {"Evi" => 8, "Hoobie" => 5, "George" => 14, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
-p my_array_sorting_method(i_want_pets, "pets") == ["3", "4", "I", "but", "have", "only", "pets", "want"]
-p my_hash_sorting_method(my_family_pets_ages, age) == [["Annabelle", 2], ["Ditto", 5], ["Hoobie", 5], ["Bogart", 6], ["Poly", 6], ["Evi", 8], ["George", 14]] 
-# This may be false depending on how your method deals with ordering the animals with the same ages.
-p my_deletion_method(i_want_pets, "a") == ["I", 4, "pets", "but", "I", "only", 3 ]
-p my_deletion_method(my_family_pets_ages, "George") == {"Evi" => 8, "Hoobie" => 5, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
+# p my_array_finding_method(i_want_pets, "t") == ["want","pets","but"]
+# p my_hash_finding_method(my_family_pets_ages, 3) == ["Hoobie", "Ditto"]
+# p my_array_modification_method(i_want_pets, 1) == ["I", "want", 4, "pets", "but", "I", "only", "have", 3 ]
+# p my_hash_modification_method(my_family_pets_ages, 2) == {"Evi" => 8, "Hoobie" => 5, "George" => 14, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
+# p my_array_sorting_method(i_want_pets, "pets") == ["3", "4", "I", "but", "have", "only", "pets", "want"]
+# p my_hash_sorting_method(my_family_pets_ages, age) == [["Annabelle", 2], ["Ditto", 5], ["Hoobie", 5], ["Bogart", 6], ["Poly", 6], ["Evi", 8], ["George", 14]] 
+# # This may be false depending on how your method deals with ordering the animals with the same ages.
+# p my_deletion_method(i_want_pets, "a") == ["I", 4, "pets", "but", "I", "only", 3 ]
+# p my_deletion_method(my_family_pets_ages, "George") == {"Evi" => 8, "Hoobie" => 5, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
 
 # Reflect!
 # 
