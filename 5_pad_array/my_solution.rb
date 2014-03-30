@@ -1,6 +1,6 @@
 # U1.W3: Pad an Array!
 
-# I worked on this challenge Jake Huhn.
+# I worked on this challenge with Jake Huhn.
 
 # Complete each step below according to the challenge directions and 
 # include it in this file. Also make sure everything that isn't code

@@ -4,7 +4,7 @@
 # include it in this file. Also make sure everything that isn't code
 # is commented in the file.  
 
-# I worked on this challenge Ken Sin
+# I worked on this challenge with Ken Sin
 
 # 1. Pseudocode
 
