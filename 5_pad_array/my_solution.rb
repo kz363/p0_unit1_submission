@@ -50,7 +50,7 @@
 
 # 3. Refactored Solution
 
-class Array 
+class Array
     def pad!(pad_length, pad_value = nil)
         self << pad_value until self.length >= pad_length
         self
@@ -59,7 +59,7 @@ class Array
     def pad(pad_length, pad_value = nil)
         new_array = self.clone 
         new_array << pad_value until new_array.length >= pad_length
-      new_array 
+        new_array 
     end
 end 
 
