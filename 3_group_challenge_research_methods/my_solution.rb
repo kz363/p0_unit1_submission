@@ -4,7 +4,7 @@ i_want_pets = ["I", "want", 3, "pets", "but", "I", "only", "have", 2]
 my_family_pets_ages = {"Evi" => 6, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, 
             "Annabelle" => 0, "Ditto" => 3}
 
-# Person 1's solution
+# Person 1's solution (Kevin)
 def my_array_finding_method(source, thing_to_find)
   words = []
   source.each {|element| words << element unless (element.is_a? Integer) || !(element.include? thing_to_find)}
@@ -39,7 +39,7 @@ end
 # from the data structures that I want.
 
 
-# Person 2
+# Person 2 (Jason)
 def my_array_modification_method(source, number)
   source.map!{|element| element.is_a?(Integer) ? element + number : element}
 end
@@ -55,32 +55,36 @@ end
 # The update method performs a similar operation on a hash object.
 
 
-# Person 3
+# Person 3 (Jake)
 def my_array_sorting_method(source)
-  source.sort { |a,b| a <=> b } 
+  source.sort { |a,b| a <=> b }
 end
 
 def my_hash_sorting_method(source, thing_to_sort)
-  source.sort_by { |name, age| age } 
+  source.sort_by { |name, age| age }
 end
 
-# Identify and describe the ruby method you implemented. 
-# 
-#
-#
+# Identify and describe the ruby method you implemented.
+# I implemented the sort and sorb_by methods in my solution, which allow one to sort through arrays, hashes and strings in order to organize them in certain ways.
+# Sort is effective when an array / hash needs to be organized either alphabetically or chronologically as it has this built on functionality should one implement
+# a comparison operator within the block. I did this above in order to sort through an array to alphabetize it, but the same could be done for numerically.
+# Sort_by adds for a little bit more customization on the user's end when it comes to sorting as one can specify exactly the element they wish to sort by, either alphabetically
+# or numerically. Above, I sorted a hash chronilogically, based on its value, age. 
 
 
-# Person 4
+# Person 4 (Judy)
 def my_array_deletion_method(source, thing_to_delete)
   #Your code here!
+  source.delete_if { |x| x.to_s.include?(thing_to_delete) }
 end
 
 def my_hash_deletion_method(source, thing_to_delete)
-  #Your code here!
+  source.delete_if { |k,v| k.to_s.include?(thing_to_delete) }
 end
 
-# Identify and describe the ruby method you implemented. 
-# 
+# Identify and describe the ruby method you implemented.
+# Within the methods implemented, I used Array/Hash's delete_if and String's include? methods to remove all all elements that include thing_to_delete
+#
 #
 #
 
